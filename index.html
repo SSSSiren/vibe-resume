@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Alex Chen - Vibe Resume</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>钟杨波 - 技术简历</title>
+    <link rel="stylesheet" href="./styles.css?v=20260825-skills-one-column" />
   </head>
   <body>
     <svg aria-hidden="true" class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
@@ -23,9 +23,6 @@
         <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
         <path d="m22 6-10 7L2 6"/>
       </symbol>
-      <symbol id="icon-github" viewBox="0 0 24 24">
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.94-2.64c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.4 3.4 0 0 0 9 18.11V22"/>
-      </symbol>
       <symbol id="icon-school" viewBox="0 0 24 24">
         <path d="M22 10 12 5 2 10l10 5 10-5z"/>
         <path d="M6 12.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5M22 10v6"/>
@@ -41,90 +38,82 @@
         <path d="M14.7 6.3a4 4 0 0 0 5 5L11 20l-5-5 8.7-8.7z"/>
         <path d="m7 17-3 3"/>
       </symbol>
+      <symbol id="icon-award" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="6"/>
+        <path d="M15.5 13.2 17 22l-5-3-5 3 1.5-8.8"/>
+      </symbol>
     </svg>
 
     <div class="toolbar" aria-label="简历操作">
-      <button type="button" class="print-button" onclick="window.print()">
+      <a class="print-button" href="./export/vibe-resume-demo.pdf" target="_blank" rel="noopener">
         <svg class="icon"><use href="#icon-print"></use></svg>
-        打印预览（正式 PDF 请用项目脚本）
-      </button>
-      <a class="source-link" href="https://github.com/LiuMengxuan04/MiniCode">
+        PDF 预览
+      </a>
+      <a class="source-link" href="./resume.docx">
         <svg class="icon"><use href="#icon-file"></use></svg>
-        MiniCode
+        原始 DOCX
       </a>
     </div>
 
-    <main class="page" aria-label="Alex Chen vibe resume PDF template">
+    <main class="page" aria-label="钟杨波技术简历">
       <header class="resume-header">
         <div class="photo-frame">
-          <img class="profile-photo" src="./assets/avatar.png" alt="AI generated mock ID photo" />
+          <img class="profile-photo" src="./assets/zyb.jpeg" alt="钟杨波头像" />
         </div>
         <div class="profile-main">
-          <p class="eyebrow">AI Agent Engineering / Tool Calling / Developer Tools</p>
+          <p class="eyebrow"></p>
           <div class="name-row">
-            <h1>Alex Chen</h1>
-            <p class="identity-line">AI Agent Engineer · Template Demo</p>
+            <h1>钟杨波</h1>
+            <p class="identity-line">南京航空航天大学 · 计算机技术硕士</p>
           </div>
           <div class="contact-line">
-            <a href="tel:13800000000"><svg class="icon"><use href="#icon-phone"></use></svg>13800000000</a>
-            <a href="mailto:alex.chen@example.com"><svg class="icon"><use href="#icon-mail"></use></svg>alex.chen@example.com</a>
-            <a href="https://github.com/example"><svg class="icon"><use href="#icon-github"></use></svg>github.com/example</a>
+            <a href="tel:18551762037"><svg class="icon"><use href="#icon-phone"></use></svg>18551762037</a>
+            <a href="mailto:yangbo.zhong@nuaa.edu.cn"><svg class="icon"><use href="#icon-mail"></use></svg>yangbo.zhong@nuaa.edu.cn</a>
           </div>
+        </div>
+        <div class="profile-side">
+          <span>共青团员</span>
+          <span>江西赣州</span>
         </div>
       </header>
 
+      <section class="section summary-section">
+        <p>热衷提升自己独立解决问题的能力，对技术有好奇心，持续关注前沿技术。</p>
+      </section>
+
       <section class="section">
-        <h2><svg class="section-icon"><use href="#icon-school"></use></svg>教育背景</h2>
+        <h2><svg class="section-icon"><use href="#icon-school"></use></svg>教育经历</h2>
 
         <div class="education-grid">
-          <div>星河大学（本科）</div>
-          <div>计算机科学与技术</div>
-          <div>2021.09 - 2025.06</div>
-          <div>云杉实验室（交换）</div>
-          <div>人机交互与软件工程</div>
-          <div>2024.02 - 2024.06</div>
+          <div><strong>南京航空航天大学</strong></div>
+          <div>计算机技术 · 硕士</div>
+          <div>2024.09 - 2027.04</div>
+          <div><strong>南京航空航天大学</strong></div>
+          <div>计算机科学与技术 · 本科</div>
+          <div>2020.09 - 2024.06</div>
         </div>
 
-        <p class="info-line"><strong>GPA：</strong>3.8/4.0　<strong>排名：</strong>Top 10%</p>
-        <p class="info-line"><strong>荣誉/奖项：</strong>校级一等奖学金、优秀学生干部、开源贡献奖、创新实践奖</p>
-        <p class="info-line"><strong>竞赛获奖：</strong>全国大学生软件设计挑战赛一等奖、Web 创意开发赛金奖、黑客松最佳工程实现奖</p>
-        <p class="info-line"><strong>学生工作：</strong>开发者社群负责人、校园开源小组组织者、新生项目导师</p>
+        <p class="info-line"><strong>本科成绩：</strong>第一学年 GPA 3.9（专业第一），全部学年 GPA 3.7；CET-6：506。</p>
+        <p class="info-line"><strong>硕士方向：</strong>保研至南京航空航天大学计算机技术专业。导师易畅言教授，研究方向为边缘计算与数字孪生网络。</p>
+        <p class="info-line"><strong>论文成果：</strong>硕士期间发表 CCF-C 论文 1 篇。</p>
       </section>
 
       <section class="section">
         <h2><svg class="section-icon"><use href="#icon-briefcase"></use></svg>实习经历</h2>
-
         <article class="experience">
           <div class="entry-head">
-            <strong class="company-title"><img class="company-logo" src="./assets/logos/bilibili-color.svg" alt="" />哔哩哔哩技术有限公司（仅为示例演示）</strong>
-            <strong>AI Agent Engineering Intern</strong>
-            <span>2024.06 - 2024.09</span>
+            <strong>面向业务数据库的 Text2SQL Agent</strong>
+            <strong>AI 应用开发 - 得物</strong>
+            <span>2026.06 - 2026.08</span>
           </div>
-          <h3>创作者运营 Agent 工作台 | 核心开发</h3>
           <p class="summary">
-            项目背景：面向创作者服务与内容运营场景，建设可配置的 Agent 工作台，支持知识检索、工单摘要、标签建议和风险提示等内部效率工具。
+            基于 Python、FastAPI、deepagents/LangGraph 实现面向内部业务数据库的 Text2SQL Agent，支持自然语言查库、Schema 语义检索、Agent 工具调用、SQL 生成校验、只读执行和 SSE 流式响应。
           </p>
           <ul>
-            <li><strong>工具调用编排：</strong>设计 tool schema、参数校验、超时重试与错误归因机制，统一知识库、工单系统、内容标签等工具的调用协议。</li>
-            <li><strong>知识检索链路：</strong>接入向量检索与关键词召回，补充 metadata filter、来源片段与引用信息，降低 Agent 回答不可追溯的问题。</li>
-            <li><strong>评测与观测：</strong>沉淀 golden cases，记录 prompt、tool call、latency、命中来源和人工反馈，为迭代模型与提示词提供可对比样本。</li>
-            <li><strong>安全与接管：</strong>为高风险工具增加权限范围、人工确认和 fallback 话术，避免 Agent 在内容操作场景中直接执行不可逆动作。</li>
-          </ul>
-        </article>
-
-        <article class="experience">
-          <div class="entry-head">
-            <strong class="company-title"><img class="company-logo" src="./assets/logos/huawei-color.svg" alt="" />华为技术有限公司（仅为示例演示）</strong>
-            <strong>Agent Platform Intern</strong>
-            <span>2023.07 - 2023.10</span>
-          </div>
-          <h3>企业知识 Agent Runtime | 核心开发</h3>
-          <p class="summary">项目背景：面向内部知识库问答与研发助手场景，参与 Agent runtime 的工具注册、会话管理、权限控制和离线评测流水线建设。</p>
-          <ul>
-            <li><strong>运行时抽象：</strong>实现会话状态、工具注册表、JSON schema 校验和流式响应封装，使业务方能够以配置方式接入自定义工具。</li>
-            <li><strong>权限与审计：</strong>按用户、空间和工具维度设计白名单与操作日志，区分只读查询、草稿生成和写入类动作的审批路径。</li>
-            <li><strong>上下文管理：</strong>支持历史消息裁剪、摘要压缩和关键事实保留，缓解长会话下 token 成本上升与上下文漂移问题。</li>
-            <li><strong>工程验证：</strong>构建 mock provider、fixture 数据和端到端用例，覆盖工具调用成功、参数缺失、权限拒绝和模型拒答等分支。</li>
+            <li><strong>Agent流程：</strong>设计数据库查询 Agent 流程，串联会话恢复、上下文构建、工具调用、NL2SQL、SQL 校验和 SSE 流式结果返回。</li>
+            <li><strong>工具链封装：</strong>基于内部平台 API 封装数据库工具链，覆盖数据库发现、表搜索、表结构查询、SQL 生成与校验和危险 SQL 拦截。</li>
+            <li><strong>Schema召回：</strong>设计列级、表级、库级三层Schema语义索引，基于OpenViking召回数据库语义上下文，并注入Agent推理过程。</li>
+            <li><strong>评测与观测：</strong>接入基于 SQLite 的 SQL Memory、查询偏好和 Langfuse 观测，基于 28 条业务库评测用例将<strong>通过数从 20/28 提升到 28/28，平均延迟降低约 72.7%， Token消耗降低约 45%</strong>。</li>
           </ul>
         </article>
       </section>
@@ -134,22 +123,34 @@
 
         <article class="experience">
           <div class="entry-head">
-            <strong class="project-title"><img src="./assets/minicode-logo.svg" alt="" />MiniCode 彩蛋联动</strong>
-            <strong>Open-source Coding Agent Integration</strong>
-            <span>Demo Project</span>
+            <strong>基于 Raft 共识算法的分布式 KV 存储数据库</strong>
+            <strong>独立开发</strong>
+            <span>2025.11 - 2025.12</span>
           </div>
-          <h3>
-            <a class="project-link" href="https://github.com/LiuMengxuan04/MiniCode">github.com/LiuMengxuan04/MiniCode</a>
-            <span class="project-stat">Open-source Easter Egg</span>
-          </h3>
           <p class="summary">
-            模板彩蛋：MiniCode 是一个 terminal-first coding agent 示例，展示会话管理、工具调用、文件编辑、命令执行和多 provider 接入等能力。
+            基于 Raft 共识算法实现分布式 K-V 数据库，具备线性一致性和分区容错性，在少于半数节点故障时仍可正常对外提供服务；使用自定跳表数据库 SkipListPro 完成 K-V 存储功能。
           </p>
           <ul>
-            <li><strong>Agent 主循环：</strong>围绕 model → tool → result → model 构建多轮执行流程，抽象命令执行、文件编辑、搜索读取等常用开发工具。</li>
-            <li><strong>上下文系统：</strong>维护会话消息、工具结果和 provider 使用记录，支持长任务下的状态恢复、压缩边界与风险提示。</li>
-            <li><strong>安全控制：</strong>对写文件、运行命令和外部请求增加权限检查与确认流程，降低 coding agent 在本地开发环境中的误操作风险。</li>
-            <li><strong>开源呈现：</strong>保留真实 MiniCode 链接作为彩蛋，其余示例内容均为 mock，用户可替换为自己的 Agent 项目或工具链。</li>
+            <li><strong>Raft 集群机制：</strong>实现 Raft 协议心跳发送与 Leader 选举机制，通过定时<strong>线程池触发心跳、选举流程</strong>，维护集群节点正常状态。</li>
+            <li><strong>存储引擎：</strong>实现<strong>跳表存储引擎</strong>，支持 KV 数据高效增删改查，支撑底层数据存储与状态机持久化。</li>
+            <li><strong>日志复制：</strong>实现 Raft 日志读写、复制与提交逻辑；Leader 处理客户端请求，日志同步至 Follower，多数复制成功后提交应用至 KV 存储。</li>
+          </ul>
+        </article>
+
+        <article class="experience">
+          <div class="entry-head">
+            <strong>基于 C++17 的轻量级协程调度库</strong>
+            <strong>独立开发</strong>
+            <span>2025.09 - 2025.10</span>
+          </div>
+          <p class="summary">
+            在 Linux 环境下基于 C++17 实现协程库核心模块，通过 ucontext_t 实现轻量级协程调度，结合 epoll 和定时器支持 IO 事件与定时器事件回调。
+          </p>
+          <ul>
+            <li><strong>同步原语封装：</strong>基于 RAII 思想封装 pthread，实现互斥量、信号量、读写锁等线程同步机制。</li>
+            <li><strong>协程模型：</strong>设计并实现基于 ucontext_t 的非对称协程，定义三种协程状态，实现子协程与主线程切换。</li>
+            <li><strong>定时器管理：</strong>支持定时任务注册、取消、刷新及超时回调提取，并与 IO 调度流程联动。</li>
+            <li><strong>N-M 调度器：</strong>开发 N-M 协程调度器，使主函数线程能够参与调度，并结合 epoll 和定时器实现 IO 协程调度。</li>
           </ul>
         </article>
       </section>
@@ -157,12 +158,18 @@
       <section class="section skills-section">
         <h2><svg class="section-icon"><use href="#icon-tool"></use></svg>专业技能</h2>
         <ul class="skills-list">
-          <li>熟悉 TypeScript / Python / Node.js，能够实现 Agent runtime、CLI 工具和服务端接口。</li>
-          <li>熟悉 LLM Agent 核心机制，了解 tool calling、function schema、规划执行、结果回传与错误恢复。</li>
-          <li>熟悉 RAG 基础链路，了解向量检索、关键词召回、metadata filter、引用片段和知识库更新流程。</li>
-          <li>熟悉 Agent 工程化能力，了解 MCP、Skills、上下文压缩、会话记忆、权限审批与操作审计等设计。</li>
-          <li>熟悉评测与可观测性建设，能够整理 golden cases、mock provider、日志字段和端到端测试用例。</li>
-          <li>熟悉 Git、GitHub、README 编写和开源项目结构，能够把 demo、文档、脚本和发布流程整理成闭环。</li>
+          <li>了解大模型应用工程，具备 Tool Calling、ReAct、 OpenViking 和 Langfuse 观测实践经验。熟悉LangGraph、Smolagents、Claude Codex SDK 等 Agent 应用架构。了解 Prompt、Skill 工作流。</li>
+          <li>熟悉 C++17 及常用 STL，具备多线程编程、内存与资源管理意识，能够在 Linux 环境下完成系统级开发与调试。</li>
+          <li>熟悉 MySQL 核心原理，理解 B+Tree、MVCC、锁机制与 InnoDB 日志体系，了解 LSM-Tree 存储模型。</li>
+          <li>了解 Python / Shell 脚本语言，熟练使用 Git、CMake、GDB、Pytest 等开发调试工具。</li>
+          </ul>
+      </section>
+
+      <section class="section awards-section">
+        <h2><svg class="section-icon"><use href="#icon-award"></use></svg>荣誉证书</h2>
+        <ul class="awards-list">
+          <li>2023 年美国大学生数学建模竞赛 Meritorious Winner</li>
+          <li>2020-2021 南京航空航天大学国家奖学金</li>
         </ul>
       </section>
     </main>

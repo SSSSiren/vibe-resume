@@ -107,14 +107,15 @@ body {
   border-radius: 4px;
   border-top: 4px solid #111827;
   display: grid;
-  gap: 26px;
-  grid-template-columns: 124px minmax(0, 1fr);
+  gap: 18px;
+  grid-template-columns: 100px minmax(0, 1fr) 120px;
   margin-bottom: 24px;
   padding: 22px 24px 24px;
   text-align: left;
 }
 
 .photo-frame {
+  align-self: center;
   align-items: center;
   background: #fff;
   border: 1px solid #cbd5e1;
@@ -131,10 +132,10 @@ body {
   background: #dbeafe;
   border-radius: 4px;
   display: block;
-  height: 156px;
+  height: 120px;
   object-fit: cover;
-  object-position: 50% 34%;
-  width: 117px;
+  object-position: 50% 42%;
+  width: 90px;
 }
 
 .profile-main {
@@ -142,6 +143,25 @@ body {
   flex-direction: column;
   justify-content: center;
   min-width: 0;
+}
+
+.profile-side {
+  align-content: center;
+  border-left: 1px solid var(--hairline);
+  color: #344054;
+  display: grid;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 8px;
+  justify-items: end;
+  padding-left: 14px;
+}
+
+.profile-side span {
+  background: #f8fafc;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 5px 9px;
 }
 
 .eyebrow {
@@ -226,6 +246,21 @@ body {
 
 .section:first-of-type {
   margin-top: 0;
+}
+
+.summary-section {
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  margin-top: 0;
+  padding: 9px 13px;
+}
+
+.summary-section p {
+  color: #344054;
+  font-size: 15.5px;
+  line-height: 1.35;
+  margin: 0;
 }
 
 .section h2 {
@@ -412,7 +447,7 @@ body {
   background: var(--panel);
   border: 1px solid var(--hairline);
   border-radius: 10px;
-  columns: 2;
+  columns: 1;
   column-gap: 28px;
   font-size: 15.5px;
   line-height: 1.35;
@@ -430,6 +465,41 @@ body {
 
 .skills-list li::before {
   background: var(--rust);
+  border-radius: 999px;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+  width: 5px;
+}
+
+.awards-section {
+  margin-top: 16px;
+}
+
+.awards-list {
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  columns: 2;
+  column-gap: 28px;
+  font-size: 15.5px;
+  line-height: 1.35;
+  list-style: none;
+  margin: 0;
+  padding: 10px 14px;
+}
+
+.awards-list li {
+  break-inside: avoid;
+  margin: 0;
+  padding-left: 13px;
+  position: relative;
+}
+
+.awards-list li::before {
+  background: var(--accent);
   border-radius: 999px;
   content: "";
   height: 5px;
@@ -471,8 +541,8 @@ body {
   }
 
   .profile-photo {
-    height: 148px;
-    width: 111px;
+    height: 120px;
+    width: 90px;
   }
 
   .name-row {
@@ -501,7 +571,19 @@ body {
     justify-content: center;
   }
 
+  .profile-side {
+    border-left: 0;
+    grid-auto-flow: column;
+    justify-content: center;
+    justify-items: center;
+    padding-left: 0;
+  }
+
   .skills-list {
+    columns: 1;
+  }
+
+  .awards-list {
     columns: 1;
   }
 }
@@ -533,10 +615,10 @@ body {
     border-color: #d7dde6;
     border-radius: 0;
     border-top: 2px solid #111827;
-    gap: 12px;
-    grid-template-columns: 58px 1fr;
+    gap: 8px;
+    grid-template-columns: 46px 1fr 64px;
     margin-bottom: 12px;
-    padding: 8mm 0 5mm;
+    padding: 6mm 0 4mm;
   }
 
   .photo-frame {
@@ -547,8 +629,8 @@ body {
 
   .profile-photo {
     border-radius: 2px;
-    height: 72px;
-    width: 54px;
+    height: 64px;
+    width: 48px;
   }
 
   .resume-header h1 {
@@ -581,6 +663,19 @@ body {
     padding: 0;
   }
 
+  .profile-side {
+    border-left-color: #d7dde6;
+    font-size: 9.5px;
+    gap: 3px;
+    padding-left: 6px;
+  }
+
+  .profile-side span {
+    background: #fff;
+    border: 0;
+    padding: 0;
+  }
+
   .section h2 {
     font-size: 16px;
     margin-bottom: 7px;
@@ -593,7 +688,9 @@ body {
   }
 
   .education-grid,
-  .skills-list {
+  .skills-list,
+  .awards-list,
+  .summary-section {
     background: #fff;
     border-color: #d7dde6;
     border-radius: 0;
@@ -612,7 +709,9 @@ body {
 
   .summary,
   .experience ul,
-  .skills-list {
+  .skills-list,
+  .awards-list,
+  .summary-section p {
     font-size: 13px;
   }
 
@@ -643,7 +742,12 @@ body {
   }
 
   .skills-list {
-    columns: 2;
+    columns: 1;
     padding: 7px 8px;
+  }
+
+  .awards-list {
+    columns: 2;
+    padding: 6px 8px;
   }
 }
