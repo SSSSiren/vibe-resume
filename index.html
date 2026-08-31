@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>钟杨波 - 技术简历</title>
-    <link rel="stylesheet" href="./styles.css?v=20260825-skills-one-column" />
+    <link rel="stylesheet" href="./styles.css?v=20260826-education-nowrap" />
   </head>
   <body>
     <svg aria-hidden="true" class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +58,7 @@
     <main class="page" aria-label="钟杨波技术简历">
       <header class="resume-header">
         <div class="photo-frame">
-          <img class="profile-photo" src="./assets/zyb.jpeg" alt="钟杨波头像" />
+          <img class="profile-photo" src="./assets/zyb.png" alt="钟杨波头像" />
         </div>
         <div class="profile-main">
           <p class="eyebrow"></p>
@@ -70,10 +70,14 @@
             <a href="tel:18551762037"><svg class="icon"><use href="#icon-phone"></use></svg>18551762037</a>
             <a href="mailto:yangbo.zhong@nuaa.edu.cn"><svg class="icon"><use href="#icon-mail"></use></svg>yangbo.zhong@nuaa.edu.cn</a>
           </div>
-        </div>
-        <div class="profile-side">
-          <span>共青团员</span>
-          <span>江西赣州</span>
+          <div class="profile-meta">
+            <span>共青团员</span>
+            <span>未婚</span>
+            <span>现居南京</span>
+          </div>
+          <div class="profile-intent">
+            意向岗位：AI 应用开发工程师 / Agent 应用开发工程师 / 大模型应用工程师
+          </div>
         </div>
       </header>
 
@@ -86,34 +90,39 @@
 
         <div class="education-grid">
           <div><strong>南京航空航天大学</strong></div>
-          <div>计算机技术 · 硕士</div>
+          <div>计算机技术      · 硕士  [发表 CCF-C 论文 1 篇]</div>
           <div>2024.09 - 2027.04</div>
           <div><strong>南京航空航天大学</strong></div>
-          <div>计算机科学与技术 · 本科</div>
+          <div>计算机科学与技术 · 本科  [GPA 3.7 （15/118）；CET-6：506]</div>
           <div>2020.09 - 2024.06</div>
         </div>
+      </section>
 
-        <p class="info-line"><strong>本科成绩：</strong>第一学年 GPA 3.9（专业第一），全部学年 GPA 3.7；CET-6：506。</p>
-        <p class="info-line"><strong>硕士方向：</strong>保研至南京航空航天大学计算机技术专业。导师易畅言教授，研究方向为边缘计算与数字孪生网络。</p>
-        <p class="info-line"><strong>论文成果：</strong>硕士期间发表 CCF-C 论文 1 篇。</p>
+      <section class="section awards-section">
+        <h2><svg class="section-icon"><use href="#icon-award"></use></svg>荣誉证书</h2>
+        <ul class="awards-list">
+          <li>2020-2021 南京航空航天大学国家奖学金</li>
+          <li>2023 年美国大学生数学建模竞赛 Meritorious Winner</li>
+        </ul>
       </section>
 
       <section class="section">
         <h2><svg class="section-icon"><use href="#icon-briefcase"></use></svg>实习经历</h2>
         <article class="experience">
           <div class="entry-head">
-            <strong>面向业务数据库的 Text2SQL Agent</strong>
+            <strong>基于 Deepagents 的 Text2SQL Agent</strong>
             <strong>AI 应用开发 - 得物</strong>
             <span>2026.06 - 2026.08</span>
           </div>
           <p class="summary">
-            基于 Python、FastAPI、deepagents/LangGraph 实现面向内部业务数据库的 Text2SQL Agent，支持自然语言查库、Schema 语义检索、Agent 工具调用、SQL 生成校验、只读执行和 SSE 流式响应。
+            负责面向内部业务数据库的 Text2SQL Agent 设计与实现，最终实现单次应答<strong>平均延迟降低约 72.7%，平均工具调用减少约 82.5%，Token 消耗降低约 46.9%</strong>。
           </p>
           <ul>
-            <li><strong>Agent流程：</strong>设计数据库查询 Agent 流程，串联会话恢复、上下文构建、工具调用、NL2SQL、SQL 校验和 SSE 流式结果返回。</li>
-            <li><strong>工具链封装：</strong>基于内部平台 API 封装数据库工具链，覆盖数据库发现、表搜索、表结构查询、SQL 生成与校验和危险 SQL 拦截。</li>
-            <li><strong>Schema召回：</strong>设计列级、表级、库级三层Schema语义索引，基于OpenViking召回数据库语义上下文，并注入Agent推理过程。</li>
-            <li><strong>评测与观测：</strong>接入基于 SQLite 的 SQL Memory、查询偏好和 Langfuse 观测，基于 28 条业务库评测用例将<strong>通过数从 20/28 提升到 28/28，平均延迟降低约 72.7%， Token消耗降低约 45%</strong>。</li>
+            <li><strong>打通自然语言查库链路：</strong>设计 FastAPI 会话恢复、上下文构建、工具调用、NL2SQL、SQL 校验和 SSE 流式返回流程，支撑自然语言查询陌生业务库。</li>
+            <li><strong>建设数据库工具能力：</strong>基于内部平台API抽象数据库发现、表搜索、表结构查询、SQL 生成、只读执行和危险 SQL 拦截工具，降低 Agent 编表、错字段和误执行风险。</li>
+            <li><strong>提升业务库 Schema 命中率：</strong>设计列级、表级、库级三层 Schema 语义索引，基于 OpenViking 存储和召回数据库语义上下文，并在运行时注入 Agent 推理过程。</li>
+            <li><strong>沉淀多轮查询记忆：</strong>接入 SQL Memory、查询偏好和会话存储，复用历史成功问题、SQL、表名和执行摘要，为相似问题提供 few-shot 查询模式参考。</li>
+            <li><strong>实现交付与评测闭环：</strong>补齐记忆管理、Docker、Langfuse 和评测脚本，支撑服务部署、问题追踪、token/延迟观测和效果评估。</li>
           </ul>
         </article>
       </section>
@@ -123,34 +132,34 @@
 
         <article class="experience">
           <div class="entry-head">
-            <strong>基于 Raft 共识算法的分布式 KV 存储数据库</strong>
+            <strong>基于 Raft 的分布式 KV 存储数据库</strong>
             <strong>独立开发</strong>
             <span>2025.11 - 2025.12</span>
           </div>
           <p class="summary">
-            基于 Raft 共识算法实现分布式 K-V 数据库，具备线性一致性和分区容错性，在少于半数节点故障时仍可正常对外提供服务；使用自定跳表数据库 SkipListPro 完成 K-V 存储功能。
+            独立完成 Raft 一致性协议、日志复制、状态机持久化和跳表存储引擎，实现具备线性一致性和分区容错能力的 KV 存储服务，在少于半数节点故障时仍可对外提供读写能力。
           </p>
           <ul>
-            <li><strong>Raft 集群机制：</strong>实现 Raft 协议心跳发送与 Leader 选举机制，通过定时<strong>线程池触发心跳、选举流程</strong>，维护集群节点正常状态。</li>
-            <li><strong>存储引擎：</strong>实现<strong>跳表存储引擎</strong>，支持 KV 数据高效增删改查，支撑底层数据存储与状态机持久化。</li>
-            <li><strong>日志复制：</strong>实现 Raft 日志读写、复制与提交逻辑；Leader 处理客户端请求，日志同步至 Follower，多数复制成功后提交应用至 KV 存储。</li>
+            <li><strong>保障集群高可用选主：</strong>实现 Raft 心跳发送、Leader 选举和节点状态维护，通过定时线程池触发心跳与选举流程。</li>
+            <li><strong>保障写入一致性提交：</strong>实现日志读写、复制、提交和状态机应用流程，Leader 接收请求后同步至 Follower，多数复制成功后提交。</li>
+            <li><strong>支撑 KV 数据持久化读写：</strong>实现 SkipListPro 跳表存储引擎，支持 KV 数据增删改查，并承接 Raft 状态机持久化。</li>
           </ul>
         </article>
 
         <article class="experience">
           <div class="entry-head">
-            <strong>基于 C++17 的轻量级协程调度库</strong>
+            <strong>Linux C++17 协程调度库</strong>
             <strong>独立开发</strong>
             <span>2025.09 - 2025.10</span>
           </div>
           <p class="summary">
-            在 Linux 环境下基于 C++17 实现协程库核心模块，通过 ucontext_t 实现轻量级协程调度，结合 epoll 和定时器支持 IO 事件与定时器事件回调。
+            独立完成协程运行时、N-M 调度器、epoll IO 调度和定时器模块，实现用户态协程切换、IO 事件回调和定时任务统一调度。
           </p>
           <ul>
-            <li><strong>同步原语封装：</strong>基于 RAII 思想封装 pthread，实现互斥量、信号量、读写锁等线程同步机制。</li>
-            <li><strong>协程模型：</strong>设计并实现基于 ucontext_t 的非对称协程，定义三种协程状态，实现子协程与主线程切换。</li>
-            <li><strong>定时器管理：</strong>支持定时任务注册、取消、刷新及超时回调提取，并与 IO 调度流程联动。</li>
-            <li><strong>N-M 调度器：</strong>开发 N-M 协程调度器，使主函数线程能够参与调度，并结合 epoll 和定时器实现 IO 协程调度。</li>
+            <li><strong>搭建用户态协程运行时：</strong>基于 ucontext_t 设计非对称协程，维护协程状态流转，实现主协程与子协程之间的上下文切换。</li>
+            <li><strong>实现多线程任务调度：</strong>实现 N-M 协程调度器，使主函数线程参与调度，并支持任务在线程池内分发执行。</li>
+            <li><strong>统一 IO 事件与定时任务处理：</strong>结合 epoll 和定时器管理模块，支持 IO 事件监听、定时任务注册、取消、刷新和超时回调提取。</li>
+            <li><strong>降低并发资源管理风险：</strong>基于 RAII 封装 pthread 互斥量、信号量和读写锁，降低资源泄漏和锁生命周期管理风险。</li>
           </ul>
         </article>
       </section>
@@ -158,20 +167,13 @@
       <section class="section skills-section">
         <h2><svg class="section-icon"><use href="#icon-tool"></use></svg>专业技能</h2>
         <ul class="skills-list">
-          <li>了解大模型应用工程，具备 Tool Calling、ReAct、 OpenViking 和 Langfuse 观测实践经验。熟悉LangGraph、Smolagents、Claude Codex SDK 等 Agent 应用架构。了解 Prompt、Skill 工作流。</li>
+          <li>了解大模型应用工程，熟悉LangGraph、Smolagents、Claude Codex SDK 等 Agent 应用架构，具备 Function Calling、ReAct、OpenViking 记忆体和 Langfuse 观测实践经验，了解 Prompt 和 Skill 工作流。</li>
           <li>熟悉 C++17 及常用 STL，具备多线程编程、内存与资源管理意识，能够在 Linux 环境下完成系统级开发与调试。</li>
           <li>熟悉 MySQL 核心原理，理解 B+Tree、MVCC、锁机制与 InnoDB 日志体系，了解 LSM-Tree 存储模型。</li>
           <li>了解 Python / Shell 脚本语言，熟练使用 Git、CMake、GDB、Pytest 等开发调试工具。</li>
           </ul>
       </section>
 
-      <section class="section awards-section">
-        <h2><svg class="section-icon"><use href="#icon-award"></use></svg>荣誉证书</h2>
-        <ul class="awards-list">
-          <li>2023 年美国大学生数学建模竞赛 Meritorious Winner</li>
-          <li>2020-2021 南京航空航天大学国家奖学金</li>
-        </ul>
-      </section>
     </main>
   </body>
 </html>

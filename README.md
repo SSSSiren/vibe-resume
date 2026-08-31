@@ -78,6 +78,24 @@ npm run export:pdf
 export/vibe-resume-demo.pdf
 ```
 
+导出纯文字版本：
+
+```bash
+npm run export:text
+```
+
+默认输出：
+
+```text
+export/钟杨波-计算机硕士-南航.txt
+```
+
+也可以指定输出路径和模板 HTML：
+
+```bash
+./export-text.sh export/my-resume.txt templates/dense-two-page/index.html
+```
+
 导出高密度双页模板：
 
 ```bash

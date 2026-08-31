@@ -1,4 +1,4 @@
-export function createBrowserLaunchError(error, executablePath) {
+export function createBrowserLaunchError(error, executablePath, fallbackCommand = "./export-pdf.sh") {
   const details = error instanceof Error ? error.message : String(error);
   const restrictedEnvironment =
     /MachPortRendezvousServer|Permission denied|Operation not permitted|Target page, context or browser has been closed/i.test(
@@ -9,7 +9,7 @@ export function createBrowserLaunchError(error, executablePath) {
     return new Error(
       [
         `Chromium could not start in the current restricted environment: ${executablePath}.`,
-        "Run ./export-pdf.sh in a local terminal, or allow the environment to launch a headless browser.",
+        `Run ${fallbackCommand} in a local terminal, or allow the environment to launch a headless browser.`,
         "Setting CHROME_PATH selects a browser, but does not bypass sandbox permissions."
       ].join(" ")
     );
