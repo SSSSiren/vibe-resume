@@ -110,19 +110,20 @@
         <h2><svg class="section-icon"><use href="#icon-briefcase"></use></svg>实习经历</h2>
         <article class="experience">
           <div class="entry-head">
-            <strong>基于 Deepagents 的 Text2SQL Agent</strong>
+            <strong>基于 ReAct 的 Text2SQL Agent</strong>
             <strong>AI 应用开发 - 得物</strong>
             <span>2026.06 - 2026.08</span>
           </div>
           <p class="summary">
-            负责面向内部业务数据库的 Text2SQL Agent 设计与实现，最终实现单次应答<strong>平均延迟降低约 72.7%，平均工具调用减少约 82.5%，Token 消耗降低约 46.9%</strong>。
+            负责面向内部业务数据库的 Text2SQL Agent 设计与工程化落地，围绕 Agent 编排、工具调用、上下文工程、记忆机制、执行护栏和评测观测构建完整闭环；最终实现单次应答<strong>平均延迟降低约 72.7%，平均工具调用减少约 82.5%，Token 消耗降低约 46.9%</strong>。
           </p>
           <ul>
-            <li><strong>打通自然语言查库链路：</strong>设计 FastAPI 会话恢复、上下文构建、工具调用、NL2SQL、SQL 校验和 SSE 流式返回流程，支撑自然语言查询陌生业务库。</li>
-            <li><strong>建设数据库工具能力：</strong>基于内部平台API抽象数据库发现、表搜索、表结构查询、SQL 生成、只读执行和危险 SQL 拦截工具，降低 Agent 编表、错字段和误执行风险。</li>
-            <li><strong>提升业务库 Schema 命中率：</strong>设计列级、表级、库级三层 Schema 语义索引，基于 OpenViking 存储和召回数据库语义上下文，并在运行时注入 Agent 推理过程。</li>
-            <li><strong>沉淀多轮查询记忆：</strong>接入 SQL Memory、查询偏好和会话存储，复用历史成功问题、SQL、表名和执行摘要，为相似问题提供 few-shot 查询模式参考。</li>
-            <li><strong>实现交付与评测闭环：</strong>补齐记忆管理、Docker、Langfuse 和评测脚本，支撑服务部署、问题追踪、token/延迟观测和效果评估。</li>
+            <li><strong>编排多轮推理链路：</strong>基于 ReAct 模式设计 FastAPI 会话恢复、上下文构建、工具调用、SQL生成与校验和 SSE 流式返回流程，使 Agent 能在陌生业务库中自主完成“理解问题、选择工具、生成 SQL、校验执行、返回结果”的多步任务。</li>
+            <li><strong>设计数据库工具调用体系：</strong>基于内部平台 API 封装数据库发现、表搜索、表结构查询、SQL 生成、只读执行和危险 SQL 拦截等工具，规范工具输入输出、错误归一化和调用边界，提升 Agent 对外部系统的可控访问能力。</li>
+            <li><strong>构建 SQL 执行安全护栏：</strong>在工具层加入只读约束、DDL/DML 拦截、字段校验、LIMIT 控制和异常处理，降低错误表名、错误字段或高风险 SQL 带来的误执行风险。</li>
+            <li><strong>优化上下文工程：</strong>针对业务库 Schema 规模大、全量注入 Token 成本高的问题，设计库级、表级、列级三层 Schema 语义索引，基于 OpenViking 召回相关数据库上下文并按需注入推理过程，减少盲目探表和无效工具调用。</li>
+            <li><strong>沉淀查询记忆：</strong>接入 SQL Memory、查询偏好和会话存储，记录历史成功问题、SQL、表名、数据库和执行摘要；新问题按语义相似度召回历史查询模式，作为 few-shot 参考辅助生成。</li>
+            <li><strong>建立 Agent 评测闭环：</strong>补齐 Docker 部署、Langfuse trace、评测脚本和管理工具，持续追踪 turns、token、延迟、SQL 正确性和失败原因，将成功样本沉淀进 Memory，将失败样本反向驱动 prompt 和工具边界迭代。</li>
           </ul>
         </article>
       </section>
